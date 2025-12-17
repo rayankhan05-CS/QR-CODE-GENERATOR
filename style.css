@@ -1,9 +1,86 @@
-body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 20px;
+:root {
+  --bg-app:#020617;
+  --bg-panel:rgba(15,23,42,.85);
+  --border:rgba(255,255,255,.08);
+  --text-main:#f8fafc;
+  --text-muted:#94a3b8;
+  --primary:#6366f1;
+  --radius:14px;
 }
-h1 {
-  color: #007bff;
+
+[data-theme="light"] {
+  --bg-app:#f1f5f9;
+  --bg-panel:rgba(255,255,255,.9);
+  --border:rgba(0,0,0,.08);
+  --text-main:#0f172a;
+  --text-muted:#64748b;
+}
+
+* { box-sizing:border-box }
+
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:var(--bg-app);
+  color:var(--text-main);
+  display:flex;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.panel{
+  background:var(--bg-panel);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:32px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+input,textarea,select{
+  width:100%;
+  padding:12px 16px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  background:rgba(0,0,0,.3);
+  color:var(--text-main);
+}
+
+button{
+  cursor:pointer;
+  border:none;
+  border-radius:var(--radius);
+  font-weight:600;
+}
+
+button.primary{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;
+  padding:14px;
+}
+
+button.ghost{
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  color:var(--text-muted);
+}
+
+#previewCard{
+  background:#fff;
+  border-radius:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.effect-neon canvas{
+  filter:drop-shadow(0 0 10px #39ff14);
+}
+.effect-holo canvas{
+  animation:holo 3s infinite alternate;
+}
+
+@keyframes holo{
+  from{filter:hue-rotate(0deg)}
+  to{filter:hue-rotate(40deg)}
 }
