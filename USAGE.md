@@ -1,8 +1,8 @@
-Download or clone the project repository to your local system.
+To Download or clone the project repository to your local system.
 
 Open the project folder in any code editor such as Visual Studio Code.
 
-Copy the source code files or open the index.html file directly in the editor.
+Copy the source code files or open the SOURCCE CODE.html file directly in the editor.
 
 Paste the code into any HTML compiler or run it using a local development server.
 
