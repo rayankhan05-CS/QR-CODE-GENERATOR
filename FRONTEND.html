@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- QR Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+</head>
+<body>
+
+  <div class="panel" style="max-width:420px;width:100%">
+    <h2>QR Code Generator</h2>
+    <p style="color:var(--text-muted)">Generate QR codes instantly</p>
+
+    <input id="text" type="text" placeholder="Enter text or URL">
+
+    <div style="display:flex;gap:10px;margin:14px 0">
+      <input id="dotsColor" type="color" value="#000000">
+      <input id="bgColor" type="color" value="#ffffff">
+    </div>
+
+    <button class="primary" onclick="generateQR()">Generate QR Code</button>
+
+    <div id="previewCard" style="margin-top:20px;padding:20px">
+      <div id="qrcode"></div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:16px">
+      <button class="ghost" onclick="downloadQR()">Download</button>
+      <button class="ghost" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
